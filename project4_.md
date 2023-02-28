@@ -5,7 +5,7 @@ __Lucas Soto__
    
 ##  Elevator pitch
   
-The main purpose of this project is to create a model that is able to predict if a house was built before 1980.  I used the data from the state of Colorado. Also, I used the Tree Decision Classifier model for this project. 
+The main purpose of this project is to create a model that is able to predict if a house was built before 1980.  I used the data from the state of Colorado. Also, I used a Tree Decision Classifier model for this project. 
 
 ## Sample Data View
 
