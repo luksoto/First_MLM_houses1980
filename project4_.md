@@ -82,6 +82,26 @@ y_predictions=clf.predict(X_test)
 metrics.accuracy_score(y_test, y_predictions)
   
 ```
+
+#### The quality of the classification model using evaluation metrics
+  
+The first and most simple way to evaluate the performance of the method is accuracy. Which is the total amount of correct predictions divided by the total amount of data points. In this case the accuracy is 0.90.
+Another useful tool we have is Precision. Which is the ability of the model to identify only the relevant data points. This is calculated by dividing the number of true positives by the sum of the number of true positives with the number of false positives. In this case the precision is 0.93.   
+  
+
+  
+  
+```python
+print(classification_report(y_test,y_predictions))
+  
+```
+  
+![](report.png )
+  
+
+
+
+
 ###  Detailing most important features in the model
   
 #### The following chart shows the feature with most influence in the model
@@ -113,23 +133,7 @@ variablesChart.save("variable.png")
   
   
   
-###  
-  
-#### The quality of the classification model using evaluation metrics
-  
-The first and most simple way to evaluate the performance of the method is accuracy. Which is the total amount of correct predictions divided by the total amount of data points. In this case the accuracy is 0.90.
-Another useful tool we have is Precision. Which is the ability of the model to identify only the relevant data points. This is calculated by dividing the number of true positives by the sum of the number of true positives with the number of false positives. In this case the precision is 0.93.   
-  
 
-  
-  
-```python
-print(classification_report(y_test,y_predictions))
-  
-```
-  
-![](report.png )
-  
   
   
   
