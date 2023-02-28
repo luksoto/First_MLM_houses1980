@@ -117,7 +117,7 @@ variablesChart.save("variable.png")
   
 #### The quality of the classification model using evaluation metrics
   
-The first and simple way to evaluate the performance of the method is Accuracy. This is the total amount of correct predictions divided by the total amount of data points. In this case the accuracy is 0.90.
+The first and simple way to evaluate the performance of the method is accuracy. This is the total amount of correct predictions divided by the total amount of data points. In this case the accuracy is 0.90.
 Another useful tool we have is Precision. This is ability of the model to indetify the  only the relevant data points. It is calculate by dividing the number of true positivies by the sum of the number of true positives with the number of false positives. In this case the precision is 0.93.   
   
 
