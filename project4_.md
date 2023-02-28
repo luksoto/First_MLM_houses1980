@@ -1,4 +1,4 @@
-#   Project Predicting Houses Built Before 1980
+#   Predicting Houses Built Before 1980
   
 __Lucas Soto__
   
