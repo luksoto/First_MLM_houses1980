@@ -1,18 +1,18 @@
-#  Client Report - [Project 4 Machine Learning]
+#   Project Predicting Houses Built Before 1980
   
 __Lucas Soto__
   
 ##  Elevator pitch
   
   
-The main idea behind this project was to create a model that is able to predict when a house was built before 1980. For this reason, I used the data from the state of Colorado and chose some variables from the data as features. Also, I used the Tree Decision Classifier model for this project. 
+The main purpose of this project is to create a model that is able to predict if a house was built before 1980.  I used the data from the state of Colorado. Also, I used the Tree Decision Classifier model for this project. 
   
 ###  GRAND QUESTION 1
   
-####  Create 2-3 charts that evaluate potential relationships between the home variables and before1980.
+####  Two charts that evaluate potential relationships between some home variables and the before1980 variable.
   
-In a way to look for variables that show any realtionship before 1980, I decided to used the livearea variable. This variable show the square footage that is liveable in the house. As result I found that there is not relevant information or relatioship between the variable for houses before 1980. We can observe that the distribution is very similar for all the years with exeption after 2000 there are some outliers. 
-In my second graph I chose the selling price variable, but I found that this variable is not very relevant for my relatioship that I am looking for. We can observe that the before 2000 most of the houses prices are below 2 million dollares. 
+In a way to look for variables that show any realtionship before 1980, I decided to used the livearea variable. This variable show the square footage that is liveable in the house. As result I found that there is not relevant information or relatioship between the variable for houses before 1980. We can observe that the distribution is very similar for all the years with some exeption after the year 2000 where there are some outliers. 
+In my second graph, I chose the selling price variable, but I found that this variable is not very relevant for my relatioship that I am looking for. We can observe that the before 2000 most of the houses prices are below 2 million dollars
   
 #####  TECHNICAL DETAILS
   
