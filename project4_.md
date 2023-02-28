@@ -7,7 +7,7 @@ __Lucas Soto__
   
 The main purpose of this project is to create a model that is able to predict if a house was built before 1980.  I used the data from the state of Colorado. Also, I used the Tree Decision Classifier model for this project. 
 
-## Data View
+## Sample Data View
 
 
 |    | parcel           |   abstrprd |   livearea |   finbsmnt |   basement |   yrbuilt |   totunits |   stories |   nocars |   numbdrm |   numbaths |   sprice |   deduct |   netprice |   tasp |   smonth |   syear |   condition_AVG |   condition_Excel |   condition_Fair |   condition_Good |   condition_VGood |   quality_A |   quality_B |   quality_C |   quality_D |   quality_X |   gartype_Att |   gartype_Att/Det |   gartype_CP |   gartype_Det |   gartype_None |   gartype_att/CP |   gartype_det/CP |   arcstyle_BI-LEVEL |   arcstyle_CONVERSIONS |   arcstyle_END UNIT |   arcstyle_MIDDLE UNIT |   arcstyle_ONE AND HALF-STORY |   arcstyle_ONE-STORY |   arcstyle_SPLIT LEVEL |   arcstyle_THREE-STORY |   arcstyle_TRI-LEVEL |   arcstyle_TRI-LEVEL WITH BASEMENT |   arcstyle_TWO AND HALF-STORY |   arcstyle_TWO-STORY |   qualified_Q |   qualified_U |   status_I |   status_V |   before1980 |
@@ -15,12 +15,12 @@ The main purpose of this project is to create a model that is able to predict if
 |  0 | 00102-08-065-065 |       1130 |       1346 |          0 |          0 |      2004 |          1 |         2 |        2 |         2 |          2 |   100000 |        0 |     100000 | 100000 |        2 |    2012 |               1 |                 0 |                0 |                0 |                 0 |           0 |           0 |           1 |           0 |           0 |             0 |                 1 |            0 |             0 |              0 |                0 |                0 |                   0 |                      0 |                   0 |                      1 |                             0 |                    0 |                      0 |                      0 |                    0 |                                  0 |                             0 |                    0 |             1 |             0 |          1 |          0 |            0 |
 |  1 | 00102-08-073-073 |       1130 |       1249 |          0 |          0 |      2005 |          1 |         1 |        1 |         2 |          2 |    94700 |        0 |      94700 |  94700 |        4 |    2011 |               1 |                 0 |                0 |                0 |                 0 |           0 |           0 |           1 |           0 |           0 |             1 |                 0 |            0 |             0 |              0 |                0 |                0 |                   0 |                      0 |                   1 |                      0 |                             0 |                    0 |                      0 |                      0 |                    0 |                                  0 |                             0 |                    0 |             1 |             0 |          1 |          0 |            0 |
 |  2 | 00102-08-078-078 |       1130 |       1346 |          0 |          0 |      2005 |          1 |         2 |        1 |         2 |          2 |    89500 |        0 |      89500 |  89500 |       10 |    2010 |               1 |                 0 |                0 |                0 |                 0 |           0 |           0 |           1 |           0 |           0 |             1 |                 0 |            0 |             0 |              0 |                0 |                0 |                   0 |                      0 |                   0 |                      1 |                             0 |                    0 |                      0 |                      0 |                    0 |                                  0 |                             0 |                    0 |             1 |             0 |          1 |          0 |            0 |
-###  GRAND QUESTION 1
+### Finding Relationships 
   
 ####  Two charts that evaluate potential relationships between some home variables and the before1980 variable.
   
-In a way to look for variables that show any realtionship before 1980, I decided to used the livearea variable. This variable show the square footage that is liveable in the house. As result I found that there is not relevant information or relatioship between the variable for houses before 1980. We can observe that the distribution is very similar for all the years with some exeption after the year 2000 where there are some outliers. 
-In my second graph, I chose the selling price variable, but I found that this variable is not very relevant for my relatioship that I am looking for. We can observe that the before 2000 most of the houses prices are below 2 million dollars
+I decided to created two charts using variables that could show some relationhip with the target.I found that there is not relevant information or relatioship between the livinarea and before1980 variables. We can observe that the distribution is very similar for all the years with some exeption after the 2000 year where there are some outliers. 
+The second graph, the selling price variable does not show relevant relevant information neither. We can observe that the before the 2000 year most of the houses prices are below $2 million.
   
 #####  TECHNICAL DETAILS
   
@@ -53,12 +53,12 @@ graph2.save("graph2.png")
   
 ###  GRAND QUESTION 2
   
-####  Can you build a classification model (before or after 1980) that has at least 90% accuracy for the state of Colorado to use (explain your model choice and which models you tried)?
+####  Classification Model with 90% ocurracy. 
   
-  
-As I mentioned before I used the Tree Decision Classifier, since I found that it fits better with the data I am working and with the tipe of prediction I was working. For example, I wanted the model to classify  as before 1980 or after 1980 the houses according with some specif characteristics. For this reason, since I wanted classify the tree decision classifier will be one of my options. Another reasons because I choose this model is because It is easy to interpreter and visualize.
-I tried other models as GradientBoostingClassifier but I could not obtain an accuracy score bigger than 0.80. For this reason, I decided to switch and add some attirbutes to the tree decision classifier model as the criterion="entropy" that improved the accuracy score to 90%. 
-  
+The first part for building this model is to split the data into two parts, the target and the features that will help us predict our target. 
+The second part is to split again the data into the training and the test data. I have chosen to use a test size of 0.34. It means that 66% of the data will be use to train the model and 34% will be use to test the model. 
+Finally, I use the  deicision tree classifier model because the featueres are categorical and discrete. This model works better with these type of features.
+ 
 #####  TECHNICAL DETAILS
   
   
@@ -82,11 +82,10 @@ y_predictions=clf.predict(X_test)
 metrics.accuracy_score(y_test, y_predictions)
   
 ```
-###  GRAND QUESTION 3
+###  Detailing most Important features in the Model
   
-####  Will you justify your classification model by detailing the most important features in your model (a chart and a description are a must)?
+#### The following chart show the feature with most influence in the model.
   
-The bar chart below shows how each feature incluenfe in the classifier model, and in the first place we have the arcstyle variable with more than 24%. It made a lot of sense since the architechture style change a long of the time, then it should be a variable that will differenciate houses before 1980. In the same way other features influence in the model but not with the same proportion. Something that caught my attention was the livearea has more influence in the model than the selling price. These two variables I graphed for question 1 but did not show relevant information.  
   
 #####  TECHNICAL DETAILS
   
@@ -116,12 +115,12 @@ variablesChart.save("variable.png")
   
 ###  GRAND QUESTION 4
   
-####  Can you describe the quality of your classification model using 2-3 evaluation metrics? You need to provide an interpretation of each evaluation metric when you provide the value.
+#### The quality of the classification model using evaluation metrics
   
 The first and simple way to evaluate the performance of the method is Accuracy. This is the total amount of correct predictions divided by the total amount of data points. In this case the accuracy is 0.90.
 Another useful tool we have is Precision. This is ability of the model to indetify the  only the relevant data points. It is calculate by dividing the number of true positivies by the sum of the number of true positives with the number of false positives. In this case the precision is 0.93.   
   
-#####  TECHNICAL DETAILS
+
   
   
 ```python
@@ -135,10 +134,7 @@ print(classification_report(y_test,y_predictions))
   
   
   
-  
-  
-  
-  
+ 
   
   
   
