@@ -2,10 +2,12 @@
   
 __Lucas Soto__
   
+   
 ##  Elevator pitch
   
-  
 The main purpose of this project is to create a model that is able to predict if a house was built before 1980.  I used the data from the state of Colorado. Also, I used the Tree Decision Classifier model for this project. 
+
+print(dwellings_ml.head(5).to_markdown()) 
   
 ###  GRAND QUESTION 1
   
