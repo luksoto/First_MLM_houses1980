@@ -5,7 +5,7 @@ __Lucas Soto__
    
 ##  Elevator pitch
   
-The main purpose of this project is to create a model that is able to predict if a house was built before 1980.  I used the data from the state of Colorado. Also, I used a Tree Decision Classifier model for this project. 
+The main purpose of this project is to create a model that is able to predict if a house was built before 1980.  I used the data from the state of Colorado. I also used a Tree Decision Classifier model for this project. 
 
 ## Sample Data View
 
@@ -19,8 +19,8 @@ The main purpose of this project is to create a model that is able to predict if
   
 ####  Two charts that evaluate potential relationships between some home variables and the before1980 variable.
   
-I decided to created two charts using variables that could show some relationhip with the target.I found that there is not relevant information or relatioship between the livinarea and before1980 variables. We can observe that the distribution is very similar for all the years with some exeption after the 2000 year where there are some outliers. 
-The second graph, the selling price variable does not show relevant relevant information neither. We can observe that the before the 2000 year most of the houses prices are below $2 million.
+I created two charts using variables that could show some relationship with the target. I found that there is not relevant information or relationship between the variables livearea and before1980. We can observe that the distribution is very similar for all the years with some exeptions after the year 2000, where there are some outliers. 
+In the second graph, the selling price variable does not show relevant information either. We can observe that before the year 2000 most of the house prices are below $2 million.
   
 #####  TECHNICAL DETAILS
   
@@ -55,9 +55,9 @@ graph2.save("graph2.png")
   
 ####  Classification Model with 90% ocurracy. 
   
-The first part for building this model is to split the data into two parts, the target and the features that will help us predict our target. 
-The second part is to split again the data into the training and the test data. I have chosen to use a test size of 0.34. It means that 66% of the data will be use to train the model and 34% will be use to test the model. 
-Finally, I use the  deicision tree classifier model because the featueres are categorical and discrete. This model works better with these type of features.
+The first step to build this model is to split the data into two parts, the target and the features. The features will help us predict our target. 
+The second step is to split again the data into the training and the test data. For this model I decided to use a test size of 0.34, which means that 66% of the data will be use to train the model and 34% will be use to test the model. 
+Finally, I used the deicision tree classifier model because the features are categorical and discrete. I found that this model works better with these type of features.
  
 #####  TECHNICAL DETAILS
   
@@ -117,8 +117,8 @@ variablesChart.save("variable.png")
   
 #### The quality of the classification model using evaluation metrics
   
-The first and simple way to evaluate the performance of the method is accuracy. This is the total amount of correct predictions divided by the total amount of data points. In this case the accuracy is 0.90.
-Another useful tool we have is Precision. This is ability of the model to indetify the  only the relevant data points. It is calculate by dividing the number of true positivies by the sum of the number of true positives with the number of false positives. In this case the precision is 0.93.   
+The first and most simple way to evaluate the performance of the method is accuracy. Which is the total amount of correct predictions divided by the total amount of data points. In this case the accuracy is 0.90.
+Another useful tool we have is Precision. Which is the ability of the model to identify only the relevant data points. This is calculated by dividing the number of true positives by the sum of the number of true positives with the number of false positives. In this case the precision is 0.93.   
   
 
   
