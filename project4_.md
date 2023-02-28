@@ -3,11 +3,11 @@
 __Lucas Soto__
   
    
-##  Elevator pitch
+##  Project Objective
   
 The main purpose of this project is to create a model that is able to predict if a house was built before 1980.  I used the data from the state of Colorado. I also used a Tree Decision Classifier model for this project. 
 
-## Sample Data View
+### Sample Data View
 
 
 |    | parcel           |   abstrprd |   livearea |   finbsmnt |   basement |   yrbuilt |   totunits |   stories |   nocars |   numbdrm |   numbaths |   sprice |   deduct |   netprice |   tasp |   smonth |   syear |   condition_AVG |   condition_Excel |   condition_Fair |   condition_Good |   condition_VGood |   quality_A |   quality_B |   quality_C |   quality_D |   quality_X |   gartype_Att |   gartype_Att/Det |   gartype_CP |   gartype_Det |   gartype_None |   gartype_att/CP |   gartype_det/CP |   arcstyle_BI-LEVEL |   arcstyle_CONVERSIONS |   arcstyle_END UNIT |   arcstyle_MIDDLE UNIT |   arcstyle_ONE AND HALF-STORY |   arcstyle_ONE-STORY |   arcstyle_SPLIT LEVEL |   arcstyle_THREE-STORY |   arcstyle_TRI-LEVEL |   arcstyle_TRI-LEVEL WITH BASEMENT |   arcstyle_TWO AND HALF-STORY |   arcstyle_TWO-STORY |   qualified_Q |   qualified_U |   status_I |   status_V |   before1980 |
@@ -17,12 +17,12 @@ The main purpose of this project is to create a model that is able to predict if
 |  2 | 00102-08-078-078 |       1130 |       1346 |          0 |          0 |      2005 |          1 |         2 |        1 |         2 |          2 |    89500 |        0 |      89500 |  89500 |       10 |    2010 |               1 |                 0 |                0 |                0 |                 0 |           0 |           0 |           1 |           0 |           0 |             1 |                 0 |            0 |             0 |              0 |                0 |                0 |                   0 |                      0 |                   0 |                      1 |                             0 |                    0 |                      0 |                      0 |                    0 |                                  0 |                             0 |                    0 |             1 |             0 |          1 |          0 |            0 |
 ### Finding Relationships 
   
-####  Two charts that evaluate potential relationships between some home variables and the before1980 variable.
+####  Two charts that evaluate potential relationships between livearea, price, and the before1980 variables
   
 I created two charts using variables that could show some relationship with the target. I found that there is not relevant information or relationship between the variables livearea and before1980. We can observe that the distribution is very similar for all the years with some exeptions after the year 2000, where there are some outliers. 
 In the second graph, the selling price variable does not show relevant information either. We can observe that before the year 2000 most of the house prices are below $2 million.
   
-#####  TECHNICAL DETAILS
+#####  Technical Details
   
   
 ```python
@@ -51,15 +51,15 @@ graph2.save("graph2.png")
   
   
   
-###  GRAND QUESTION 2
+### Model
   
-####  Classification Model with 90% ocurracy. 
+####  Classification Model with 90% Accuracy
   
 The first step to build this model is to split the data into two parts, the target and the features. The features will help us predict our target. 
 The second step is to split again the data into the training and the test data. For this model I decided to use a test size of 0.34, which means that 66% of the data will be use to train the model and 34% will be use to test the model. 
 Finally, I used the deicision tree classifier model because the features are categorical and discrete. I found that this model works better with these type of features.
  
-#####  TECHNICAL DETAILS
+#####  Technical Details
   
   
 ```python
@@ -82,12 +82,12 @@ y_predictions=clf.predict(X_test)
 metrics.accuracy_score(y_test, y_predictions)
   
 ```
-###  Detailing most Important features in the Model
+###  Detailing most important features in the model
   
-#### The following chart show the feature with most influence in the model.
+#### The following chart shows the feature with most influence in the model
   
   
-#####  TECHNICAL DETAILS
+#####  Technical Details
   
   
 ```python
@@ -113,7 +113,7 @@ variablesChart.save("variable.png")
   
   
   
-###  GRAND QUESTION 4
+###  
   
 #### The quality of the classification model using evaluation metrics
   
